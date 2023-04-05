@@ -18,13 +18,15 @@ export const MoviesDetails = () => {
     fetchDetails();
   }, []);
 
+  const { title, overview, genres } = movieDetails;
+
   return (
     <>
-      {movieDetails.title ? (
+      {title ? (
         <div>
-          <p>{movieDetails.title}</p>
-          <p>{movieDetails.overview}</p>
-          {movieDetails.genres.map(gen => {
+          <p>{title}</p>
+          <p>{overview}</p>
+          {genres.map(gen => {
             return <p key={gen.id}>{gen.name}</p>;
           })}
           <p>
