@@ -12,7 +12,6 @@
   width: 150px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 .castList img {
   border-radius: 8px;

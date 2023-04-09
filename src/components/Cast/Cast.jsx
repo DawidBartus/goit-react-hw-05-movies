@@ -34,6 +34,7 @@ const Cast = () => {
                   }
                   alt={`${actor.name}`}
                   width={150}
+                  height={225}
                 />
                 <p>Name: {actor.name}</p>
               </li>
