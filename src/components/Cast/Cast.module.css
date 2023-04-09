@@ -1,0 +1,19 @@
+.castList {
+  display: flex;
+  justify-content: center;
+
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+.castList li {
+  list-style: none;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.castList img {
+  border-radius: 8px;
+}

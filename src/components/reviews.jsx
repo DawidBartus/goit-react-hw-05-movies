@@ -1,38 +1,41 @@
 import { useParams } from 'react-router-dom';
 import { fetchMovieReviews } from './fetchAPI';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
+import { nanoid } from 'nanoid';
 
-export const Reviews = () => {
+const Reviews = () => {
   const [movieRev, setRev] = useState([]);
   const { id } = useParams();
 
-  const fetchRev = async () => {
+  const fetchRev = useCallback(async () => {
     const details = await fetchMovieReviews(id);
 
     setRev(details);
-  };
+  }, [id]);
 
   useEffect(() => {
     fetchRev();
-  }, []);
+  }, [fetchRev]);
 
   const { results, total_results } = movieRev;
-  console.log(results);
   return (
     <div>
       {total_results ? (
-        results.map((rev, index) => {
+        results.map(rev => {
           return (
-            <>
-              {' '}
-              <p key={index}>{rev.author}</p>
+            <div key={nanoid()}>
+              <p>{rev.author}</p>
               <p>{rev.content}</p>
-            </>
+            </div>
           );
         })
       ) : (
-        <p>No reviews</p>
+        <p>
+          There's no single review added to this movie. Feel free to add your.
+        </p>
       )}
     </div>
   );
 };
+
+export default Reviews;

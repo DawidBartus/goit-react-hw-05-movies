@@ -1,0 +1,25 @@
+.pageHolder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menuHolder a {
+  text-decoration: none;
+  color: #b8b42d;
+  font-size: 40px;
+  margin: 0 15px;
+  padding: 0 10px;
+}
+.menuHolder a:hover {
+  color: #4f5d2f;
+  background-color: #b8b42d;
+  border-radius: 8px;
+  transition: 300ms;
+}
+
+.menuHolder {
+  margin-top: 10px;
+  border-radius: 8px;
+  padding: 5px;
+}

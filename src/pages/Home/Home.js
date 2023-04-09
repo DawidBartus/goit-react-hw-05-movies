@@ -1,16 +1,16 @@
 import { TrendingMovies } from 'components/TrendingMovies';
 import { React } from 'react';
+import style from './Home.module.css';
 
 const Home = () => {
   return (
     <>
-      <div>
+      <div className={style.welcomePage}>
         <h1>Welcome!</h1>
         <p>Feel free to discaver today's trending movies!</p>
-      </div>
-      <div>
+
         <h2>Trending</h2>
-        <ul>
+        <ul className={style.trendingMoviesList}>
           <TrendingMovies></TrendingMovies>
         </ul>
       </div>

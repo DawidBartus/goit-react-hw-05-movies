@@ -1,0 +1,19 @@
+.foundMovieListElem {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.foundMovieList a {
+  text-decoration: none;
+  color: #4f5d2f;
+  font-size: 22px;
+}
+.foundMovieList :hover {
+  color: #b8b42d;
+}
+.foundMovieList li {
+  list-style: none;
+}

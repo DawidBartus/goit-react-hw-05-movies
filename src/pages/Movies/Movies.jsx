@@ -1,6 +1,7 @@
-import { FoundMovies } from 'components/FoundMovies';
+import { FoundMovies } from 'components/FoundMovies/FoundMovies';
 import { fetchWithQuery } from 'components/fetchAPI';
 import { useEffect, useRef, useState } from 'react';
+import style from './Movies.module.css';
 
 const Movies = () => {
   const inputRef = useRef(null);
@@ -17,10 +18,16 @@ const Movies = () => {
   useEffect(() => {}, [film]);
 
   return (
-    <div>
-      <form action="">
-        <input ref={inputRef} type="text" id="queery" name="queery" />
-        <button type="submit" onClick={handleClick}>
+    <div className={style.trendingArea}>
+      <form action="submit">
+        <input
+          ref={inputRef}
+          type="text"
+          id="queery"
+          name="queery"
+          className={style.formInput}
+        />
+        <button type="submit" onClick={handleClick} className={style.formBttn}>
           Wyszukaj
         </button>
       </form>

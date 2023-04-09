@@ -23,15 +23,13 @@ export const fetchWithMovieID = async id => {
   const request = await fetch(link)
     .then(res => res.json())
     .catch(error => console.log(error));
-
+  console.log(request);
   return await request;
 };
 
 export const fetchMovieCredits = async id => {
   const link = `https://api.themoviedb.org/3/movie/${id}/credits?api_key=${KEY}&language=en-US`;
-  const request = await fetch(link)
-    .then(res => res.json())
-    .catch(error => console.log(error));
+  const request = await fetch(link).then(res => res.json());
 
   return await request;
 };

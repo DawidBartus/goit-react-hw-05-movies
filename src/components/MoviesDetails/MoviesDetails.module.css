@@ -1,0 +1,32 @@
+.filmHolder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.movieOverview {
+  margin: 15px;
+  font-size: 18px;
+  text-align: justify;
+  max-width: 420px;
+}
+.movieTitle {
+  font-size: 28px;
+  font-weight: bold;
+}
+.genresList {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 10px;
+  font-size: 18px;
+}
+
+.genresListElem {
+  list-style: none;
+}
+.linkHolder a {
+  text-decoration: none;
+  color: #4f5d2f;
+  font-size: 22px;
+  margin-right: 10px;
+}

@@ -1,0 +1,25 @@
+.trendingArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.formInput {
+  padding: 5px;
+  border: 1px solid #4f5d2f;
+  border-radius: 8px;
+  margin-right: 10px;
+  outline: transparent;
+}
+
+.formInput:focus {
+  outline: 1px solid #b8b42d;
+}
+.formBttn {
+  padding: 5px;
+  border-radius: 8px;
+  border: 1px solid #4f5d2f;
+}
+.formBttn:hover {
+  border: 1px solid #b8b42d;
+  background-color: rgb(245, 245, 245);
+}
