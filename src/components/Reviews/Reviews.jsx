@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom';
-import { fetchMovieReviews } from './fetchAPI';
+import { fetchMovieReviews } from '../fetchAPI';
 import { useEffect, useState } from 'react';
 import { nanoid } from 'nanoid';
 
