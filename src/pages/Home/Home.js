@@ -7,7 +7,7 @@ const Home = () => {
     <>
       <div className={style.welcomePage}>
         <h1>Welcome!</h1>
-        <p>Feel free to discaver today's trending movies!</p>
+        <p>Feel free to discaver today trending movies!</p>
 
         <h2>Trending</h2>
         <ul className={style.trendingMoviesList}>

@@ -1,0 +1,15 @@
+.reviewsComList {
+  padding: 0;
+  min-width: 320px;
+  max-width: 550px;
+}
+
+.reviewsComElem {
+  list-style: none;
+}
+.reviewsComElem p {
+  text-align: justify;
+}
+.reviewsAuthor {
+  font-weight: bold;
+}

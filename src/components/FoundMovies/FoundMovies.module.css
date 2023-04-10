@@ -17,3 +17,7 @@
 .foundMovieList li {
   list-style: none;
 }
+.foundMovieList {
+  margin: 0;
+  padding: 0;
+}

@@ -2,16 +2,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0 20px;
 }
 .movieOverview {
-  margin: 15px;
   font-size: 18px;
   text-align: justify;
-  max-width: 420px;
+  min-width: 320px;
+  max-width: 450px;
 }
 .movieTitle {
   font-size: 28px;
   font-weight: bold;
+  margin: 10px 10px;
+  text-align: center;
 }
 .genresList {
   margin: 0;

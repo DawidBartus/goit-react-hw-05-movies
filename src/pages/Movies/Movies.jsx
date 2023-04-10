@@ -1,6 +1,6 @@
 import { FoundMovies } from 'components/FoundMovies/FoundMovies';
-import { fetchWithQuery } from 'components/fetchAPI';
-import { useEffect, useRef, useState } from 'react';
+import { fetchWithQuery } from 'components/utils/fetchAPI';
+import { useRef, useState } from 'react';
 import style from './Movies.module.css';
 
 const Movies = () => {
@@ -11,11 +11,9 @@ const Movies = () => {
     e.preventDefault();
     const queery = inputRef.current.value;
     const response = await fetchWithQuery(queery);
-    console.log(response);
+
     setFilm(response);
   };
-
-  useEffect(() => {}, [film]);
 
   return (
     <div className={style.trendingArea}>

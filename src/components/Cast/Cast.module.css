@@ -1,11 +1,12 @@
 .castList {
   display: flex;
   justify-content: center;
-
   gap: 10px;
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
+  min-width: 320px;
+  max-width: 1200px;
 }
 .castList li {
   list-style: none;
