@@ -24,7 +24,7 @@ export const fetchWithMovieID = async id => {
   const request = await fetch(link)
     .then(res => res.json())
     .catch(error => console.log(error));
-  console.log(request);
+
   return await request;
 };
 

@@ -17,7 +17,7 @@ export const MoviesDetails = () => {
     const fetchDetails = async () => {
       try {
         const details = await fetchWithMovieID(id);
-        console.log(details);
+
         setDetails(details);
         setloading(false);
       } catch (error) {
