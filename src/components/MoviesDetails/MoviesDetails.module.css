@@ -35,6 +35,8 @@
 }
 .filmDetails {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .poster {
   margin-right: 20px;
