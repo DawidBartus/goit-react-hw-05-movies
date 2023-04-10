@@ -10,7 +10,8 @@ export const fetchTrendingMovies = async () => {
 };
 
 export const fetchWithQuery = async query => {
-  const link = `https://api.themoviedb.org/3/search/company?api_key=${KEY}&query=${query}&page=1`;
+  const newQuery = query.split(' ').join('%20');
+  const link = `https://api.themoviedb.org/3/search/company?api_key=${KEY}&query=${newQuery}&page=1`;
   const request = await fetch(link)
     .then(res => res.json())
     .catch(error => console.log(error));
@@ -23,7 +24,7 @@ export const fetchWithMovieID = async id => {
   const request = await fetch(link)
     .then(res => res.json())
     .catch(error => console.log(error));
-
+  console.log(request);
   return await request;
 };
 

@@ -17,6 +17,7 @@ export const MoviesDetails = () => {
     const fetchDetails = async () => {
       try {
         const details = await fetchWithMovieID(id);
+        console.log(details);
         setDetails(details);
         setloading(false);
       } catch (error) {
@@ -27,7 +28,8 @@ export const MoviesDetails = () => {
     fetchDetails();
   }, [id]);
 
-  const { title, overview, genres } = movieDetails;
+  const { title, overview, genres, poster_path, release_date, vote_average } =
+    movieDetails;
 
   return (
     <>
@@ -47,17 +49,47 @@ export const MoviesDetails = () => {
               <Link to={prevPage} className={backLink.back}>
                 Back
               </Link>
-              <p className={style.movieTitle}>{title}</p>
-              <p className={style.movieOverview}>{overview}</p>
-              <ul className={style.genresList}>
-                {genres.map(gen => {
-                  return (
-                    <li key={gen.id} className={style.genresListElem}>
-                      {gen.name}
-                    </li>
-                  );
-                })}
-              </ul>
+              <div className={style.filmDetails}>
+                {poster_path ? (
+                  <img
+                    src={`http://image.tmdb.org/t/p/w185/${poster_path}`}
+                    alt={`${title} poster`}
+                    className={style.poster}
+                  />
+                ) : (
+                  <div className={style.errorPoster}>
+                    <p>{`${title} poster`}</p>
+                  </div>
+                )}
+                <div>
+                  <p className={style.movieTitle}>
+                    {title} ({release_date.slice(0, 4)})
+                  </p>
+                  <p>User score: {Math.round(vote_average * 10)}%</p>
+                  <p className={style.movieOverview}>{overview}</p>
+                  <ul className={style.genresList}>
+                    <span>Genres:</span>
+                    <>
+                      {genres.length > 0 ? (
+                        <>
+                          {genres.map(gen => {
+                            return (
+                              <li key={gen.id} className={style.genresListElem}>
+                                {gen.name}
+                              </li>
+                            );
+                          })}
+                        </>
+                      ) : (
+                        <li className={style.genresListElem}>
+                          No genres added
+                        </li>
+                      )}
+                    </>
+                  </ul>
+                </div>
+              </div>
+
               <p className={style.linkHolder}>
                 <Link to="cast">Cast</Link>
                 <Link to="revievs">Revievs</Link>

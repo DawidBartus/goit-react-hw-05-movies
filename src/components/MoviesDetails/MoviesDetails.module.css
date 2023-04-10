@@ -33,3 +33,17 @@
   font-size: 22px;
   margin-right: 10px;
 }
+.filmDetails {
+  display: flex;
+}
+.poster {
+  margin-right: 20px;
+}
+.errorPoster {
+  width: 185px;
+  background-color: gray;
+  color: white;
+  text-align: center;
+  margin-right: 20px;
+  border-radius: 8px;
+}
