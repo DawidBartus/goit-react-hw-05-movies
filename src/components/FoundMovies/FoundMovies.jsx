@@ -11,7 +11,7 @@ export const FoundMovies = props => {
         return (
           <li key={film.id} className={style.foundMovieListElem}>
             <Link to={`${film.id}`} state={{ from: location }}>
-              {film.name}
+              {film.title}
             </Link>
           </li>
         );

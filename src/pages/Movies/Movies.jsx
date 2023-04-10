@@ -1,11 +1,12 @@
 import { FoundMovies } from 'components/FoundMovies/FoundMovies';
 import { fetchWithQuery } from 'components/utils/fetchAPI';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import style from './Movies.module.css';
 
 const Movies = () => {
   const inputRef = useRef(null);
   const [film, setFilm] = useState([]);
+  const [foundMovie, setfoundMovie] = useState(false);
 
   const handleClick = async e => {
     e.preventDefault();
@@ -13,6 +14,10 @@ const Movies = () => {
     const response = await fetchWithQuery(queery);
 
     setFilm(response);
+
+    if (response.length === 0) {
+      setfoundMovie(true);
+    }
   };
 
   return (
@@ -30,6 +35,7 @@ const Movies = () => {
         </button>
       </form>
       {film.length > 0 ? <FoundMovies query={film} /> : <p>Try me</p>}
+      {foundMovie ? <p>Movie not found</p> : null}
     </div>
   );
 };
