@@ -17,6 +17,8 @@ const Movies = () => {
 
     if (response.length === 0) {
       setfoundMovie(true);
+    } else {
+      setfoundMovie(false);
     }
   };
 
