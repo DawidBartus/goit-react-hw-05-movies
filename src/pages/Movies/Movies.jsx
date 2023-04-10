@@ -1,6 +1,6 @@
 import { FoundMovies } from 'components/FoundMovies/FoundMovies';
 import { fetchWithQuery } from 'components/utils/fetchAPI';
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import style from './Movies.module.css';
 
 const Movies = () => {
