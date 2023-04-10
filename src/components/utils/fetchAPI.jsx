@@ -9,8 +9,8 @@ export const fetchTrendingMovies = async () => {
   return await request.results;
 };
 
-export const fetchWithQuery = async query => {
-  const newQuery = query.split(' ').join('%20');
+export const fetchWithQuery = async newQuery => {
+  // const newQuery = query.split(' ').join('%20');
   const link = `https://api.themoviedb.org/3/search/movie?api_key=${KEY}&language=en-US&query=${newQuery}&page=1&include_adult=false`;
   const request = await fetch(link)
     .then(res => res.json())
